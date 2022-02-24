@@ -26,5 +26,12 @@ public class LogEntry implements Serializable {
         return Date;
     }
 
-
+    @Override
+    public String toString() {
+        return "LogEntry{" +
+                "Message='" + Message + '\'' +
+                ", Author='" + Author + '\'' +
+                ", Date=" + Date +
+                '}';
+    }
 }

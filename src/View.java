@@ -1,7 +1,7 @@
 import java.io.*;
 
 public class View {
-    private static void load() throws IOException, ClassNotFoundException {
+    public static void load() throws IOException, ClassNotFoundException {
         ObjectInputStream ins=new ObjectInputStream(new FileInputStream(new File("testSave")));
         LogEntry l = (LogEntry) ins.readObject();
         ins.close();
@@ -9,7 +9,7 @@ public class View {
 
     }
 
-    private static void save() throws IOException {
+    public static void save() throws IOException {
         LogEntry l = new LogEntry("test","Anders");
         ObjectOutputStream outs=new ObjectOutputStream(new FileOutputStream(new File("testSave")));
         outs.writeObject(l);
@@ -17,5 +17,4 @@ public class View {
         outs.close();
     }
 
-}
 }
